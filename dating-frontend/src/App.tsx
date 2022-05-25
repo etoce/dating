@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { HeaderBar } from "./modules/HeaderBar/HeaderBar";
+import { MainArea } from "./MainArea";
+import { User } from "./types"
+
+const dummyUserRin: User = {
+	id: "1",
+	alias: "Rin",
+	email: "rin@kagamine.net",
+	password: "mikunee"
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div id="App">
+			<HeaderBar
+				user={dummyUserRin}
+				setAlias={
+					(newAlias) => {dummyUserRin.alias = newAlias; console.log(newAlias);}
+				}
+			/>
+			<MainArea/>
+		</div>
+	);
 }
 
 export default App;

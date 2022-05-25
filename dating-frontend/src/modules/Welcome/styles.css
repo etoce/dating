@@ -1,0 +1,19 @@
+#profile {
+	font-size: 24px;
+	padding: 100px;
+	/*margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 100px;
+	margin-bottom: 100px;*/
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+
+#profile-screen {
+
+}
+
+.profile-screen-button {
+	cursor: pointer;
+}
